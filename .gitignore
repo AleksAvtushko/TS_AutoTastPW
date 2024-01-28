@@ -11,3 +11,7 @@ app.log
 /playwright-report
 /cypress/screenshots/test.cy.ts/
 /cypress/videos/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

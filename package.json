@@ -1,38 +1,40 @@
 {
-  "name": "ts_autotastpw",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format:code": "prettier --write \"**/.js,.ts\" ",
-    "lint": "eslint ./**/*.{ts,json}",
-    "lint:fix": "eslint ./**/*.{ts,json} --quiet --fix",
-    "prepare": "husky install"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AleksAvtushko/TS_AutoTastPW.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "lint-staged": {
-    "*.ts": [
-      "npm run lint"
-    ]
-  },
-  "bugs": {
-    "url": "https://github.com/AleksAvtushko/TS_AutoTastPW/issues"
-  },
-  "homepage": "https://github.com/AleksAvtushko/TS_AutoTastPW#readme",
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.19.1",
-    "@typescript-eslint/parser": "^6.19.1",
-    "eslint": "8.22.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "husky": "^9.0.6",
-    "lint-staged": "^15.2.0",
-    "prettier": "^3.2.4"
-  }
+    "name": "ts_autotastpw",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "format:code": "prettier --write \"**/.js,.ts\" ",
+        "lint": "eslint ./**/*.{ts,json}",
+        "lint:fix": "eslint ./**/*.{ts,json} --quiet --fix",
+        "prepare": "husky install",
+        "run": "npx playwright test --headed"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AleksAvtushko/TS_AutoTastPW.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "lint-staged": {
+        "*.ts": [
+            "npm run lint"
+        ]
+    },
+    "bugs": {
+        "url": "https://github.com/AleksAvtushko/TS_AutoTastPW/issues"
+    },
+    "homepage": "https://github.com/AleksAvtushko/TS_AutoTastPW#readme",
+    "devDependencies": {
+        "@playwright/test": "^1.41.1",
+        "@types/node": "^20.11.10",
+        "@typescript-eslint/eslint-plugin": "^6.19.1",
+        "@typescript-eslint/parser": "^6.19.1",
+        "eslint": "8.22.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.1.3",
+        "husky": "^9.0.6",
+        "lint-staged": "^15.2.0",
+        "prettier": "^3.2.4"
+    }
 }
