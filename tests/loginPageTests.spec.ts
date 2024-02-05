@@ -6,6 +6,13 @@ test.describe("Check LogIn page", () => {
         await page.goto(logInPageData.urlMarketingPage);
     });
 
+    test.only("Check: Login page is opened", async ({ page }) => {
+        const signInPopup = page.locator('[class="login-form"]');
+        await page.getByRole("button", { name: "Login" }).click();
+        await page.waitForTimeout(150);
+        await expect(signInPopup).toBeHidden();
+    });
+
     test("Check: Login to site if Email and Password are valid", async ({ page }) => {
         await page.getByRole("button", { name: "Login" }).click();
         await page.getByTestId("username").fill(logInPageData.validEmail);
